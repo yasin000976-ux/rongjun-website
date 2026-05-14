@@ -1,0 +1,17 @@
+{
+    "name": "rongjun-website",
+        "version": "1.0.0",
+        "description": "GaN Fast Charger B2B Website",
+        "main": "backend/server.js",
+        "scripts": {
+          "start": "node backend/server.js",
+                "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+                "postinstall": "cd frontend && npm install && cd ../backend && npm install"
+    },
+  "engines": {
+        "node": ">=22.0.0",
+              "npm": ">=10.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
