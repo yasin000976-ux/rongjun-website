@@ -1,29 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const inquiryController = require('../controllers/inquiryController');
 
-// GET all inquiries
-router.get('/', (req, res) => {
-    res.json({ message: 'Get all inquiries' });
-});
-
-// GET single inquiry
-router.get('/:id', (req, res) => {
-    res.json({ message: 'Get single inquiry' });
-});
-
-// POST create inquiry
-router.post('/', (req, res) => {
-    res.json({ message: 'Create inquiry' });
-});
-
-// PUT update inquiry
-router.put('/:id', (req, res) => {
-    res.json({ message: 'Update inquiry' });
-});
-
-// DELETE inquiry
-router.delete('/:id', (req, res) => {
-    res.json({ message: 'Delete inquiry' });
-});
+router.get('/', inquiryController.getInquiries);
+router.get('/:id', inquiryController.getInquiry);
+router.post('/', inquiryController.createInquiry);
+router.put('/:id', inquiryController.updateInquiry);
+router.delete('/:id', inquiryController.deleteInquiry);
 
 module.exports = router;
